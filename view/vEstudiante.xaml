@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6dchinchin.view.vEstudiante"
+             Title="Estudiantes">
+
+    <VerticalStackLayout Padding="20"
+                         Spacing="10">
+
+        <!-- TITULO -->
+        <Label Text="Consumo de WS / Estudiante"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="Center" />
+
+        <!-- ENCABEZADO -->
+        <Grid ColumnDefinitions="*,*,*,*"
+              BackgroundColor="Yellow"
+              Padding="8">
+
+            <Label Text="Codigo"
+                   FontAttributes="Bold"
+                   Grid.Column="0" />
+
+            <Label Text="Nombre"
+                   FontAttributes="Bold"
+                   Grid.Column="1" />
+
+            <Label Text="Apellido"
+                   FontAttributes="Bold"
+                   Grid.Column="2" />
+
+            <Label Text="Edad"
+                   FontAttributes="Bold"
+                   Grid.Column="3" />
+
+        </Grid>
+
+        <!-- LISTA -->
+        <ListView x:Name="ListaEstudiantes"
+                  SeparatorVisibility="Default"
+                  HasUnevenRows="True">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <Grid ColumnDefinitions="*,*,*,*"
+                              Padding="8">
+
+                            <Label Text="{Binding id_estudiante}"
+                                   Grid.Column="0" />
+
+                            <Label Text="{Binding nombre}"
+                                   Grid.Column="1" />
+
+                            <Label Text="{Binding apellido}"
+                                   Grid.Column="2" />
+
+                            <Label Text="{Binding edad}"
+                                   Grid.Column="3" />
+
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </VerticalStackLayout>
+
+</ContentPage>
