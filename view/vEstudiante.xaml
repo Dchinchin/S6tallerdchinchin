@@ -14,6 +14,11 @@
                TextColor="Blue"
                HorizontalOptions="Center" />
 
+        <Button Text="Agregar"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="BtnAgregar_Clicked" />
+
       
         <Grid ColumnDefinitions="*,*,*,*"
               BackgroundColor="Yellow"
@@ -40,7 +45,8 @@
        
         <ListView x:Name="ListaEstudiantes"
                   SeparatorVisibility="Default"
-                  HasUnevenRows="True">
+                  HasUnevenRows="True"
+                  ItemTapped="ListaEstudiantes_ItemTapped">
 
             <ListView.ItemTemplate>
                 <DataTemplate>

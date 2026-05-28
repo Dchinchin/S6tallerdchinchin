@@ -6,10 +6,15 @@ namespace S6dchinchin.Modelos
 {
     public class Estudiante
     {
-        public int codigo {  get; set; }
-            public string nombre { get; set; }
-            public string apellido { get; set; }
-            public string edad {  get; set; }
+        public int codigo { get; set; }
+        public int id_estudiante
+        {
+            get => codigo;
+            set => codigo = value;
+        }
 
+        public string nombre { get; set; } = string.Empty;
+        public string apellido { get; set; } = string.Empty;
+        public string edad { get; set; } = string.Empty;
     }
 }
