@@ -7,14 +7,19 @@
     <VerticalStackLayout Padding="20"
                          Spacing="10">
 
-        <!-- TITULO -->
+       
         <Label Text="Consumo de WS / Estudiante"
                FontSize="22"
                FontAttributes="Bold"
                TextColor="Blue"
                HorizontalOptions="Center" />
 
-        <!-- ENCABEZADO -->
+        <Button Text="Agregar"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="BtnAgregar_Clicked" />
+
+      
         <Grid ColumnDefinitions="*,*,*,*"
               BackgroundColor="Yellow"
               Padding="8">
@@ -37,10 +42,11 @@
 
         </Grid>
 
-        <!-- LISTA -->
+       
         <ListView x:Name="ListaEstudiantes"
                   SeparatorVisibility="Default"
-                  HasUnevenRows="True">
+                  HasUnevenRows="True"
+                  ItemTapped="ListaEstudiantes_ItemTapped">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
